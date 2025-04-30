@@ -1,50 +1,59 @@
 package lv.acodemy;
 
 public class Playground {
-    public static void main(String[] arg) {
+    public static void main(String[] args) {
 
         Dog rex = new Dog();
+        // netu imeni = null
+        // netu age = 0
+        // breedName = unknown breed
 
+        // Encapsulation
+        // name = "Rex"
         rex.setName("Rex");
+        // age = 1
         rex.setAge(1);
-
 
         rex.bark();
         rex.feed();
 
         System.out.println(rex.getName());
         System.out.println(rex.getAge());
+        System.out.println(rex.getBreedName());
 
-        Dog barsik = new Dog("alabai");
 
-        barsik.setName("barsik");
+        Dog barsik = new Dog("Alabai");
+        // name = null
+        // age = 0
+        // breedName = Alabai
+
+        barsik.setName("Barsik");
         barsik.setAge(1);
-
-        barsik.bark();
-        barsik.feed();
 
         System.out.println(barsik.getName());
         System.out.println(barsik.getAge());
 
-        // ?? Print breed name through method
-
+        // ?? Print breed name through method;
         System.out.println(barsik.getBreedName());
-        System.out.println(rex.getBreedName());
 
-        Dog akai = new Dog ("Akai",2,"Dog");
-        System.out.println(akai);
-        //to String()
+        // All argument constructor
+        Dog myPjos = new Dog("Psina", 1, "Corgi");
+        System.out.println(myPjos);
 
-        Cars whiteCar = new Cars("Audi");
+        Car bemewe = new Car("M340");
+        System.out.println(bemewe);
+        bemewe.drive();
+        System.out.println(bemewe);
+        bemewe.drive();
+        bemewe.drive();
+        bemewe.drive();
+        bemewe.drive();
+        bemewe.drive();
+        System.out.println(bemewe);
+        bemewe.refuel();
+        System.out.println(bemewe);
+        bemewe.service();
 
-        System.out.println(whiteCar);
-        whiteCar.drive();
-        System.out.println(whiteCar);
-        whiteCar.refuel();
-        System.out.println(whiteCar);
-        whiteCar.service();
-        System.out.println(whiteCar);
-        whiteCar.showStatus();
 
     }
 }

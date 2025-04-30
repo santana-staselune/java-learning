@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ThirdLesson {
     public static void main(String[] args) {
+
         // Conditional operators in Java
 
         // if (is, has -> isRaining, isRandomNumber, hasEvenValue)
@@ -33,9 +34,9 @@ public class ThirdLesson {
 
         if (isWeekDay) {
             System.out.println("Working today....");
-        } else
+        } else {
             System.out.println("Will stay at home!");
-
+        }
 
         int number = 11;
         // %
@@ -43,71 +44,77 @@ public class ThirdLesson {
 
         if (number % 2 == 0) {
             System.out.println("Even number");
-        } else
+        } else {
             System.out.println("Odd number");
+        }
 
-        // if age => 18 -> Access granted
-        //In all other cases -> Access denied
+        // If age => 18 -> Access granted
+        // In all other cases -> Access denied
 
         int age = 18;
         if (age >= 18) {
             System.out.println("Access granted");
         } else {
-            System.out.println("Access denied");
+            System.out.println("Access denied!");
         }
-        //if-else-if-else
-        int hour = 12;
+
+        // if-else-if-else
+
+        int hour = 7;
         if (hour == 5) {
-            System.out.println("Will go for run");
+            System.out.println("Will go for run!");
         } else if (hour == 7) {
-            System.out.println("Will have breakfast");
+            System.out.println("Will have have breakfast!");
         } else if (hour == 9) {
-            System.out.println("Will start work");
+            System.out.println("Will start work!");
         } else {
-            System.out.println("Free time");
+            System.out.println("Free time!");
         }
 
+        // score  > = 90 - Perfect
+        // >= 70 = Good
+        // >= 50 = OK
+        // else -> NOT OK
 
-        int score = 129;
-        if (score >= 90) {
-            System.out.println("Perfect");
-        } else if (score >= 70) {
-            System.out.println("Good");
-        } else if (score >= 50) {
-            System.out.println("OK");
-        } else {
-            System.out.println("NOT OK");
-        }
+        // age -> 0 - 6 = Baby
+        // 7-17 -> Shkilla
+        // 18-65 -> Adult
+        // 66+ pens;
 
-
-        int ageB = 56;
-        if (ageB > 0 && ageB <= 6) {
-            System.out.println("Baby");
-        } else if (ageB >= 7 && ageB <= 17) {
-            System.out.println("Shkilla");
-        } else if (ageB >= 18 && ageB <= 65) {
-            System.out.println("Adult");
-        } else {
-            System.out.println("pens");
-        }
-
+        // We know conditions & loops
+        // Print even numbers from 1 to 10;
 
         for (int i = 1; i <= 10; i++) {
             if (i % 2 == 0) {
-                System.out.println("Number:" + i + " is even number");
+                System.out.println("Number:" + i + " is even number!");
             }
         }
 
         int[] numbers = {-2, -10, 5, 6, -100, 3, 0, 20};
         int sum = 0;
+
+        // Count sum only for numbers that are positive
+
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] > 0) {
                 sum = sum + numbers[i];
             }
         }
-            System.out.println(sum);
+        System.out.println("Sum of positive numbers: " + sum);
 
-        int[] arr = new int[21];
+        int sumOfNumbers = Arrays.stream(numbers)
+                .filter(n -> n > 0)
+                .sum();
+        System.out.println(sumOfNumbers);
+
+        // 1 till 20,
+        // print numbers that can be divided by 3 and 5; (chislo delitsa na 3 & na 5)
+        // print divided by 3
+        // print divided by 5
+        // else -> just print number;
+
+
+        int[] arr = new int[20];
         for(int i = 0; i < arr.length; i++) {
             arr[i] = i;
         }
@@ -125,11 +132,5 @@ public class ThirdLesson {
                 System.out.println("Numbers: " + num + "can't be divided by 3 or 5");
             }
         }
-
-
-        }
     }
-
-
-
-
+}

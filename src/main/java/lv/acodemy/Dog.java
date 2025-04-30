@@ -4,26 +4,30 @@ public class Dog {
     private String name;
     private int age;
     private String breedName = "unknown breed";
+    private String eyeColor;
 
     public Dog(String breedName) {
         this.breedName = breedName;
-
     }
 
     public Dog() {
-            }
+    }
+
+    public Dog(String name, int age, String breedName) {
+        this.name = name;
+        this.age = age;
+        this.breedName = breedName;
+    }
 
     void bark() {
         System.out.println(name + " says Woof-woof!");
-
-    }
-    void feed(){
-        System.out.println(name + " eating bones!");
-
     }
 
-    //Getter & Setter
+    void feed() {
+        System.out.println(name + " eating some food!");
+    }
 
+    // Getter & Setter
 
     public String getName() {
         return name;
@@ -44,12 +48,6 @@ public class Dog {
     public String getBreedName() {
         return breedName;
     }
-// all argument constructor
-    public Dog(String name, int age, String breedName) {
-        this.name = name;
-        this.age = age;
-        this.breedName = breedName;
-    }
 
     @Override
     public String toString() {
@@ -57,7 +55,7 @@ public class Dog {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", breedName='" + breedName + '\'' +
+                ", eyeColor='" + eyeColor + '\'' +
                 '}';
-
     }
 }
